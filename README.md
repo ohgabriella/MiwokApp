@@ -30,6 +30,7 @@ ColorsActivity
 
 This division help the people to learn all the vocabulary divided in this sub categories.
 
+2. Second I created the actions  for this 4 activities wwith the clickListener implementations
 
 Support
 -------
