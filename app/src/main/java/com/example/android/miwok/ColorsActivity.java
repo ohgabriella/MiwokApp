@@ -13,7 +13,7 @@ public class ColorsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_colors);
+        setContentView(R.layout.word_list);
 
         ArrayList<Word> words = new ArrayList<>();
 
@@ -28,7 +28,7 @@ public class ColorsActivity extends AppCompatActivity {
 
         WordAdapter itemsAdapter = new WordAdapter(this, words);
 
-        ListView listView = (ListView) findViewById(R.id.listColors);
+        ListView listView = (ListView) findViewById(R.id.WordList);
 
         listView.setAdapter(itemsAdapter);
     }
