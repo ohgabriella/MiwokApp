@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import com.example.android.miwok.classes.Word;
+import com.example.android.miwok.classes.WordAdapter;
 
 import java.util.ArrayList;
 

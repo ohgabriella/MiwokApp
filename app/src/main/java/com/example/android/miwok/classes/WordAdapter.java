@@ -1,4 +1,4 @@
-package com.example.android.miwok;
+package com.example.android.miwok.classes;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.example.android.miwok.R;
 import com.example.android.miwok.classes.Word;
 
 import java.util.ArrayList;
