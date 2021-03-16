@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter<Word> {
 
+
     public WordAdapter(Activity context, ArrayList<Word> words) {
         super(context, 0, words);
     }
@@ -26,7 +28,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
     public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
 
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
@@ -40,7 +42,14 @@ public class WordAdapter extends ArrayAdapter<Word> {
         numberTextView.setText(currentWord.getDefaultTranslation());
 
         ImageView imageView = listItemView.findViewById(R.id.miwok_image);
-        imageView.setImageResource(currentWord.getImageResourceId());
+
+        if(currentWord.hasImage()) {
+            imageView.setImageResource(currentWord.getImageResourceId());
+            imageView.setVisibility(View.VISIBLE);
+        } else {
+            //The image view is not visible here
+            imageView.setVisibility(View.GONE);
+        }
 
         return listItemView;
     }
