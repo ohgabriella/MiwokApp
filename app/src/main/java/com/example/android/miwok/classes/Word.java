@@ -4,6 +4,7 @@ public class Word {
 
     private String miwokTranslation;
     private String defaultTranslation;
+
     private int imageResourceId = NO_IMAGE_PROVIDES;
 
     public static final int NO_IMAGE_PROVIDES = -1;

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,10 +19,11 @@ import com.example.android.miwok.classes.Word;
 import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter<Word> {
+    private int colorResourceId;
 
-
-    public WordAdapter(Activity context, ArrayList<Word> words) {
+    public WordAdapter(Activity context, ArrayList<Word> words, int colorResourceId) {
         super(context, 0, words);
+        this.colorResourceId = colorResourceId;
     }
 
     @Override
@@ -50,6 +52,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
             //The image view is not visible here
             imageView.setVisibility(View.GONE);
         }
+
 
         return listItemView;
     }
